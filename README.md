@@ -1,19 +1,15 @@
 # GEMM-ArchProfiler
-  **Integrated Testbed for GEMM Performance Benchmarking in real CNN Workload on gem5 architectural simulator**
 
-
-# GEMMBench
-
-**Integrated Testbed for GEMM and CNN Performance Benchmarking on gem5**
+**Integrated Testbed for GEMM Performance Benchmarking in real CNN Workload on gem5 architectural simulator**
 
 ---
 
 ## Overview
-GEMMBench provides a unified framework for benchmarking General Matrix Multiplication (GEMM) algorithms in Convolutional Neural Network (CNN) performance on the gem5 architectural simulator. It is designed to help researchers and engineers analyze, profile, and optimize GEMM performance across diverse CPU architectures.
+GEMM-ArchProfiler provides a unified framework for benchmarking General Matrix Multiplication (GEMM) algorithms in Convolutional Neural Network (CNN) performance on the gem5 architectural simulator. It is designed to help researchers and engineers analyze, profile, and optimize GEMM performance across diverse CPU architectures.
 
 The idea is to profile GEMM algorithms, which form the core of any CNN-based implementation. As we progress toward edge-based systems, GEMM must be verified under realistic workloads. While GEMM, as an independent algorithm implementation, may work on any target architecture, real CNN implementations with real workloads may not yield appropriate results. Moreover, the environment plays a critical role, particularly for studies on memory, cache memory, and energy usage across different architectures.
 
-GEMMBench serves as a testbed for CPU-based simulation work, supporting both single-threaded and multi-threaded environments. It includes pre-built GEMM implementations, and users can also test new GEMM implementations on real CNN workloads with customizable CPU configurations, either existing or preferred.
+GEMM-ArchProfiler serves as a testbed for CPU-based simulation work, supporting both single-threaded and multi-threaded environments. It includes pre-built GEMM implementations, and users can also test new GEMM implementations on real CNN workloads with customizable CPU configurations, either existing or preferred.
 
 ---
 
@@ -30,19 +26,19 @@ Ensure your system meets the following requirements:
 
 ## Setup Instructions
 
-### Step 1: Create a Directory for GEMMBench
+### Step 1: Create a Directory for GEMM-ArchProfiler
 ```bash
-sudo mkdir -p /opt/GEMMBench
+sudo mkdir -p /opt/GEMM-ArchProfiler
 ```
 
 ### Step 2: Change Ownership of the Directory
 ```bash
-sudo chown $USER:$USER /opt/GEMMBench
+sudo chown $USER:$USER /opt/GEMM-ArchProfiler
 ```
 
 ### Step 3: Change to the Directory
 ```bash
-cd /opt/GEMMBench
+cd /opt/GEMM-ArchProfiler
 ```
 
 ### Step 4: gem5 Installation Setup
@@ -83,7 +79,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## Contributions
-Contributions are welcome! Please submit issues and pull requests to improve GEMMBench.
+Contributions are welcome! Please submit issues and pull requests to improve GEMM-ArchProfiler.
 
 ---
 
