@@ -136,7 +136,6 @@ echo "cpuconf/" >> .git/info/sparse-checkout
 git pull origin main
 ```
 
-
 ### Step 13: Execution Bug Fixing
 > **Alert**: If any, errors identified during execution, try.
 
@@ -153,6 +152,17 @@ dos2unix /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
 cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 ```
+
+### Step 14: Run the Simulation
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler` before proceeding.
+```bash
+cd /opt/GEMM-ArchProfiler
+wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/simulate.sh -O /opt/GEMM-ArchProfiler/simulate.sh
+chmod a+x /opt/GEMM-ArchProfiler/simulate.sh
+/opt/GEMM-ArchProfiler/simulate.sh
+```
+
+
 ## Usage
 Once gem5 is successfully installed:
 1. Use the provided configuration files and workloads to simulate and profile GEMM operations.
