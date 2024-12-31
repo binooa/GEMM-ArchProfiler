@@ -113,6 +113,17 @@ wget https://pjreddie.com/media/files/resnet152.weights
 ```
 ```bash
 
+### Step 10: Change Directory Back to GEMM-ArchProfiler
+```bash
+cd /opt/GEMM-ArchProfiler
+```
+
+### Step 6: Download CPU Configuration Files
+```bash
+wget -i https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/config_repo.txt -P /opt/GEMM-ArchProfiler/cpuconf
+```
+
+
 ## Usage
 Once gem5 is successfully installed:
 1. Use the provided configuration files and workloads to simulate and profile GEMM operations.
