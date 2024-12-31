@@ -104,26 +104,51 @@ rm src/gemm.c
 wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
 ```
 
-### Step 9: Download CNN Pretrained Weights
+### Step 9: Make and create executable
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
+
+```bash
+make
+```
+
+
+### Step 10: Download CNN Pretrained Weights
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
 wget https://pjreddie.com/media/files/darknet53.weights
 wget https://pjreddie.com/media/files/densenet201.weights
 wget https://pjreddie.com/media/files/resnet152.weights
 ```
-```bash
 
-### Step 10: Change Directory Back to GEMM-ArchProfiler
+
+
+### Step 11: Change Directory Back to GEMM-ArchProfiler
 ```bash
 cd /opt/GEMM-ArchProfiler
 ```
 
-### Step 6: Download CPU Configuration Files
+### Step 12: Download CPU Configuration Files
 ```bash
 wget -i https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/config_repo.txt -P /opt/GEMM-ArchProfiler/cpuconf
 ```
 
 
+### Step 13: Execution Bug Fixing
+> **Alert**: If any, errors identified during execution, try.
+
+```bash
+cat -A /opt/GEMM-ArchProfiler/darknet/cfg/imagenet1k.data
+cat -A /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
+
+cat -A /opt/GEMM-ArchProfiler/darknet/cfg/densenet201.cfg
+dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/densenet201.cfg
+
+dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/imagenet1k.data
+dos2unix /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
+
+cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
+dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
+```
 ## Usage
 Once gem5 is successfully installed:
 1. Use the provided configuration files and workloads to simulate and profile GEMM operations.
