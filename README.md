@@ -96,6 +96,20 @@ rm Makefile
 wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/Makefile -O Makefile
 ```
 
+### Step 8: Replace Existing gemm.c File in Darknet Source Directory
+```bash
+rm src/gemm.c
+wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
+```
+
+### Step 9: Download CNN Pretrained Weights
+```bash
+wget https://pjreddie.com/media/files/darknet53.weights
+wget https://pjreddie.com/media/files/densenet201.weights
+wget https://pjreddie.com/media/files/resnet152.weights
+```
+```bash
+
 ## Usage
 Once gem5 is successfully installed:
 1. Use the provided configuration files and workloads to simulate and profile GEMM operations.
