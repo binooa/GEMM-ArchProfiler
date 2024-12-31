@@ -27,8 +27,8 @@ Ensure your system meets the following requirements:
 ## Frameworks and Packages Used
 GEMM-ArchProfiler leverages three major frameworks/packages:
 
-1. **gem5 Architectural Simulator**: A detailed architectural simulation platform for CPU performance analysis.
-2. **C-based CNN Implementation**: Supports major CNN architectures such as Darknet, DenseNet, and ResNet.
+1. **gem5 Architectural Simulator**: A detailed architectural simulation platform for CPU performance analysis. https://www.gem5.org/documentation/general_docs/building
+2. **C-based CNN Implementation**: Supports major CNN architectures such as Darknet, DenseNet, and ResNet. https://github.com/pjreddie/darknet
 3. **Customized CNN Implementation**: Includes scripts and source code for:
    - GEMM Testing
    - gem5 Profiling
