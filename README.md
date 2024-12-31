@@ -91,18 +91,21 @@ cd darknet
 ```
 
 ### Step 7: Replace Existing Makefile in Darknet Directory
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
 rm Makefile
 wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/Makefile -O Makefile
 ```
 
 ### Step 8: Replace Existing gemm.c File in Darknet Source Directory
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
 rm src/gemm.c
 wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
 ```
 
 ### Step 9: Download CNN Pretrained Weights
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
 wget https://pjreddie.com/media/files/darknet53.weights
 wget https://pjreddie.com/media/files/densenet201.weights
