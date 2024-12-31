@@ -129,7 +129,11 @@ cd /opt/GEMM-ArchProfiler
 
 ### Step 12: Download CPU Configuration Files
 ```bash
-wget -i https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/config_repo.txt -P /opt/GEMM-ArchProfiler/cpuconf
+git init
+git remote add origin https://github.com/binooa/GEMM-ArchProfiler.git
+git config core.sparseCheckout true
+echo "cpuconf/" >> .git/info/sparse-checkout
+git pull origin main
 ```
 
 
