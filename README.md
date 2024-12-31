@@ -30,6 +30,7 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 1. **gem5 Architectural Simulator**: A detailed architectural simulation platform for CPU performance analysis. https://www.gem5.org/documentation/general_docs/building
 2. **C-based CNN Implementation**: Supports major CNN architectures such as Darknet, DenseNet, and ResNet. https://github.com/pjreddie/darknet
 3. **Customized CNN Implementation**: Includes scripts and source code for:
+   - GEMM Implementations   
    - GEMM Testing
    - gem5 Profiling
    - Analysis of gem5 log files
@@ -77,6 +78,18 @@ scons build/ARM/gem5.debug --gprof
 > **Note**: The `--gprof` flag enables detailed performance profiling of GEMM operations during simulation.
 
 ---
+
+### Step 5: Change Directory Back to GEMM-ArchProfiler
+```bash
+cd /opt/GEMM-ArchProfiler
+```
+
+### Step 6: Clone and Set Up Darknet
+```bash
+git clone https://github.com/pjreddie/darknet
+cd darknet
+```
+
 
 ## Usage
 Once gem5 is successfully installed:
