@@ -90,6 +90,11 @@ git clone https://github.com/pjreddie/darknet
 cd darknet
 ```
 
+### Step 7: Replace Existing Makefile in Darknet Directory
+```bash
+rm Makefile
+wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/Makefile -O Makefile
+```
 
 ## Usage
 Once gem5 is successfully installed:
