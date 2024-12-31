@@ -1,0 +1,7 @@
+classes=1000
+train  = /opt/GEMM-ArchProfiler/darknet/data/imagenet1k.train.list
+valid  = /opt/GEMM-ArchProfiler/darknet/data/imagenet1k.valid.list
+backup = /opt/GEMM-ArchProfiler/backup/
+labels = /opt/GEMM-ArchProfiler/darknet/data/imagenet.labels.list
+names  = /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
+top=5
