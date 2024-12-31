@@ -1,0 +1,2 @@
+https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/samsung_exinos.py
+https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/x86_intel_skylake_i3.py
