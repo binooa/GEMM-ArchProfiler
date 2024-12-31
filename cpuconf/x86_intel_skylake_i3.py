@@ -2,7 +2,7 @@ from m5.objects import *
 import m5
 
 # Set output directory
-m5.core.setOutputDir("/home/binu/cnn_final/skylake/output")
+m5.core.setOutputDir("/opt/GEMM-ArchProfiler/output")
 
 # Create the system
 root = Root(full_system=False)
@@ -56,13 +56,16 @@ for cpu in root.system.cpus:
     cpu.tracer = TraceCPU()
     cpu.tracer.enable = True
 
-# Set the SE workload
-binary_path = "/home/binu/cnn_final/skylake/a.out"  # Adjust path
+# Set up the workload for the system
+binary_path = '/opt/GEMM-ArchProfiler/darknet/darknet'  # Path to the Darknet binary
+args = ['classifier', 'predict', 'cfg/imagenet1k.data', 'cfg/darknet53.cfg', 'darknet53.weights', 'data/dog.jpg']
+
+# Initialize the workload with the binary and arguments
 root.system.workload = SEWorkload.init_compatible(binary_path)
 
 # Assign the workload to each CPU
-for cpu in root.system.cpus:
-    cpu.workload = Process(cmd=[binary_path])
+for cpu in root.system.big_cpus + root.system.little_cpus:
+    cpu.workload = Process(cmd=[binary_path] + args)
     cpu.createThreads()
 
 # Connect system port
