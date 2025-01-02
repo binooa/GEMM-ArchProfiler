@@ -15,8 +15,7 @@ GEMM-ArchProfiler serves as a testbed for CPU-based simulation work, supporting 
 
 ## Prerequisites
 Ensure your system meets the following requirements:
-- **Operating System**: Ubuntu 24.04 or later
-- **gem5 Version**: v24.0 or higher
+- **Operating System**: Ubuntu 22.04 or later
 - **Required Packages**: 
   - Build tools
   - Python3
