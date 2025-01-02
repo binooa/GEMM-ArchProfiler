@@ -37,8 +37,11 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 ---
 
 - [Introduction](docs/introduction.md) 
-- [Installation of gem5 architectural simulator](docs/gem5installation.md)
-- [Installation of darkent CNN library & Customization of CNN library ](docs/darkentinstallation.md)
-- [Usage](docs/usage.md)
-- [Development](docs/development.md)
+- [Step 1 : Installation of gem5 architectural simulator](docs/gem5installation.md)
+- [Step 2 : Installation of darkent CNN library & Customization of darkent CNN library ](docs/darkentinstallation.md)
+- [Step 3 : GEMM Algorithm(s) Implementation in Customised darkent CNN library](docs/darkentinstallation.md)
+- [Step 4 : GEM5 Simulator CPU Configuration(s)](docs/darkentinstallation.md)
+- [Step 5 : GEM5 Simulation Log Processor](docs/darkentinstallation.md)
+- [Step 5 : Compile & Simulate](docs/usage.md)
+- [Step 6 : Analyse Simulation Results](docs/development.md)
 - [Contributing](docs/contributing.md)
