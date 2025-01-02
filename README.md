@@ -37,7 +37,8 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 ---
 
 - [Introduction](docs/introduction.md) 
-- [Installation](docs/installation.md)
+- [Installation of gem5 architectural simulator](docs/gem5installation.md)
+- [Installation of darkent CNN library & Customization of CNN library ](docs/darkentinstallation.md)
 - [Usage](docs/usage.md)
 - [Development](docs/development.md)
 - [Contributing](docs/contributing.md)
