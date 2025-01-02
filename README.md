@@ -62,7 +62,7 @@ Run the following command to install all the necessary dependencies for building
 sudo apt install build-essential scons python3-dev git pre-commit zlib1g zlib1g-dev \
     libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev \
     libboost-all-dev libhdf5-serial-dev python3-pydot python3-venv python3-tk mypy \
-    m4 libcapstone-dev libpng-dev libelf-dev pkg-config wget cmake doxygen
+    m4 libcapstone-dev libpng-dev libelf-dev pkg-config wget cmake doxygen dos2unix
 ```
 
 #### Clone the gem5 Repository
@@ -74,7 +74,7 @@ git clone https://github.com/gem5/gem5
 Compile gem5 with the `--gprof` flag to enable compatibility with the `gprof` profiling tool:
 ```bash
 cd gem5
-scons build/X86/gem5.debug --gprof
+scons build/X86/gem5.debug ARCH=X86 --gprof
 ```
 > **Note**: The `--gprof` flag enables detailed performance profiling of GEMM operations during simulation. 
 
@@ -97,7 +97,7 @@ cd darknet
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
 rm Makefile
-wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/Makefile -O Makefile
+wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/Makefile -O Makefile
 ```
 
 ### Step 8: Replace Existing gemm.c File in Darknet Source Directory
@@ -123,6 +123,7 @@ make
 ### Step 11: Download CNN Pretrained Weights
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
+cd /opt/GEMM-ArchProfiler/darknet
 wget https://pjreddie.com/media/files/darknet53.weights
 wget https://pjreddie.com/media/files/densenet201.weights
 wget https://pjreddie.com/media/files/resnet152.weights
@@ -149,13 +150,16 @@ git pull origin main
 
 ```bash
 cat -A /opt/GEMM-ArchProfiler/darknet/cfg/imagenet1k.data
+dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/imagenet1k.data
+
 cat -A /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
+dos2unix /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
+
+cat -A /opt/GEMM-ArchProfiler/darknet/cfg/darknet53.cfg
+dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/darknet53.cfg
 
 cat -A /opt/GEMM-ArchProfiler/darknet/cfg/densenet201.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/densenet201.cfg
-
-dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/imagenet1k.data
-dos2unix /opt/GEMM-ArchProfiler/darknet/data/imagenet.shortnames.list
 
 cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
