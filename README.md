@@ -77,6 +77,8 @@ cd gem5
 scons build/X86/gem5.debug --gprof
 ```
 > **Note**: The `--gprof` flag enables detailed performance profiling of GEMM operations during simulation.
+> **Note:**  
+> The compilation process using the `--gprof` flag may take approximately one hour to complete, depending on your system's specifications. Ensure your system has sufficient computational resources and allocate adequate time for this build process.
 
 ---
 
