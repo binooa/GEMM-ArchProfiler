@@ -106,8 +106,13 @@ wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/Makefile -O Makefi
 rm src/gemm.c
 wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
 ```
+### Step 9: Copy dummy_gpu.c File in Darknet Source Directory
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
+```bash
+wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/dummy_gpu.c -O src/dummy_gpu.c
+```
 
-### Step 9: Make and create executable
+### Step 10: Make and create executable
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 
 ```bash
@@ -115,7 +120,7 @@ make
 ```
 
 
-### Step 10: Download CNN Pretrained Weights
+### Step 11: Download CNN Pretrained Weights
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
 wget https://pjreddie.com/media/files/darknet53.weights
@@ -125,12 +130,12 @@ wget https://pjreddie.com/media/files/resnet152.weights
 
 
 
-### Step 11: Change Directory Back to GEMM-ArchProfiler
+### Step 12: Change Directory Back to GEMM-ArchProfiler
 ```bash
 cd /opt/GEMM-ArchProfiler
 ```
 
-### Step 12: Download CPU Configuration Files
+### Step 13: Download CPU Configuration Files
 ```bash
 git init
 git remote add origin https://github.com/binooa/GEMM-ArchProfiler.git
@@ -139,7 +144,7 @@ echo "cpuconf/" >> .git/info/sparse-checkout
 git pull origin main
 ```
 
-### Step 13: Execution Bug Fixing
+### Step 14: Execution Bug Fixing
 > **Alert**: If any, errors identified during execution, try.
 
 ```bash
@@ -156,7 +161,7 @@ cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 ```
 
-### Step 14: Run the Simulation
+### Step 15: Run the Simulation
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler` before proceeding.
 ```bash
 cd /opt/GEMM-ArchProfiler
