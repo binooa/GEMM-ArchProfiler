@@ -73,7 +73,8 @@ git clone https://github.com/gem5/gem5
 #### Build gem5 with Profiling Support
 Compile gem5 with the `--gprof` flag to enable compatibility with the `gprof` profiling tool:
 ```bash
-scons build/ARM/gem5.debug --gprof
+cd gem5
+scons build/X86/gem5.debug --gprof
 ```
 > **Note**: The `--gprof` flag enables detailed performance profiling of GEMM operations during simulation.
 
