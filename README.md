@@ -65,6 +65,14 @@ sudo apt install build-essential scons python3-dev git pre-commit zlib1g zlib1g-
 ```
 
 #### Clone the gem5 Repository
+## About gem5
+
+gem5 is a modular and highly flexible open-source architectural simulator widely used in computer architecture research and education. It provides a comprehensive framework for simulating a variety of systems, including CPUs, GPUs, and memory subsystems, across multiple ISAs (Instruction Set Architectures) like X86, ARM, RISC-V, and more.
+
+gem5 supports detailed modeling of processor microarchitectures, cache hierarchies, and interconnects, allowing researchers to evaluate system-level performance, energy efficiency, and design trade-offs. Its versatility enables the simulation of full-system workloads as well as bare-metal applications.
+
+With its support for profiling tools like `gprof`, gem5 is an indispensable tool for performance analysis and optimization in the design of next-generation computing systems.
+
 ```bash
 git clone https://github.com/gem5/gem5
 ```
@@ -87,6 +95,12 @@ cd /opt/GEMM-ArchProfiler
 ```
 
 ### Step 6: Clone and Set Up Darknet
+## About Darknet
+
+Darknet is an open-source neural network framework written in C and CUDA, designed for speed and flexibility. It is widely used for object detection tasks and supports implementations like YOLO (You Only Look Once). Darknet offers modularity, making it easy to configure and extend for custom use cases, while maintaining high performance for both training and inference on various hardware platforms, including CPUs and GPUs.
+
+Darknet comes with a configuration script that allows the implementation of a wide range of popular CNN architectures. For the testbed, the authors utilized architectures such as Darknet53, DenseNet201, and ResNet152 to demonstrate its versatility and performance.
+
 ```bash
 git clone https://github.com/pjreddie/darknet
 cd darknet
