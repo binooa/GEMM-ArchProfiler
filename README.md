@@ -36,7 +36,7 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 
 ---
 
-- [Introduction](docs/introduction.md)
+- [Introduction](docs/introduction.md) 
 - [Installation](docs/installation.md)
 - [Usage](docs/usage.md)
 - [Development](docs/development.md)
