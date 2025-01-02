@@ -21,8 +21,8 @@ COMMON=-Iinclude/ -Isrc/
 CFLAGS=-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC $(COMMON) -I/home/binu/gem5/gem5/include
 
 # gem5-specific paths
-GEM5_INCLUDE=/home/binu/gem5/gem5/include
-GEM5_LIB=/home/binu/gem5/gem5/util/m5/build/x86/out
+GEM5_INCLUDE=/opt/GEMM-ArchProfiler/gem5/include
+GEM5_LIB=/opt/GEMM-ArchProfiler/gem5/util/m5/build/x86/out
 
 # Add gem5 paths to compilation and linking flags
 CFLAGS+= -I$(GEM5_INCLUDE)
