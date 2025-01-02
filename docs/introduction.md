@@ -15,3 +15,7 @@ Gem5 enables custom architecture exploration, allowing users to design hardware 
 Integrating GEMM optimization with gem5 simulations enhances the deployment of CNN models on edge devices. Through gem5, developers can test and validate GEMM implementations, ensuring that they meet the latency and throughput requirements for real-time inference. The simulator's ability to replicate heterogeneous computing environments, combining CPUs, NPUs, and accelerators, allows for holistic optimization of GEMM across diverse hardware configurations. This integration significantly reduces design and testing costs while accelerating the development of edge AI solutions.
 
 In summary, GEMM algorithms are indispensable for CNNs, and their optimization is a prerequisite for achieving high-performance AI models. The gem5 simulator complements this optimization by enabling detailed analysis, architectural exploration, and energy-efficient design tailored to edge computing needs. With its exclusive focus on CPU-based simulations, this testbed serves as a critical tool for advancing efficient and scalable edge AI systems.
+
+---
+
+[← Back to Main README](../README.md)

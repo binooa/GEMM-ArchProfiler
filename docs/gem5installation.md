@@ -50,3 +50,5 @@ scons build/X86/gem5.debug ARCH=X86 --gprof
 > **Note:** : The compilation process may take approximately one hour to complete, depending on your system's specifications. Ensure your system has sufficient computational resources and allocate adequate time for this build process.
 
 ---
+
+[← Back to Main README](../README.md)
