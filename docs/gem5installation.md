@@ -54,13 +54,22 @@ scons build/X86/gem5.debug ARCH=X86 --gprof
 
 > **Note:** : The compilation process may take approximately one hour to complete, depending on your system's specifications. Ensure your system has sufficient computational resources and allocate adequate time for this build process.
 
+### Build the m5 Utility 
+Navigate to the m5 utility directory and build the required libraries for the X86 architecture
+```bash
+cd /opt/GEMM-ArchProfiler/gem5/util/m5
+scons build/x86/out/libm5.a
+```
+If the library file libm5.a or libm5.so is missing, this command will generate it in the build/x86/out directory.
+
+
 #### Check gem5 
 
 ### Step 5: Verify the Build
 Check if the gem5 binary was successfully built by listing the build/X86/ directory:
 
 ```bash
-Copy code
+cd /opt/GEMM-ArchProfiler/gem5/
 ls build/X86/
 ```
 You should see a file named gem5.opt or gem5.debug.
@@ -72,6 +81,13 @@ To ensure that gem5 is working, run a simple test simulation:
 build/X86/gem5.opt configs/example/se.py --cmd=/bin/ls
 ```
 This runs a simple simulation using the X86 architecture and the ls command.
+
+### Step 7: Verify the m5 Utility
+Check if the libm5.a or libm5.so file exists:
+```bash
+ls /opt/GEMM-ArchProfiler/gem5/util/m5/build/x86/out
+```
+
 
 ---
 
