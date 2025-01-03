@@ -98,33 +98,10 @@ cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 ```
 
-### Step 15: Replace Existing gemm.c File in Darknet Source Directory
-> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
-```bash
-cd /opt/GEMM-ArchProfiler/darknet/
-rm src/gemm.c
-wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
-```
-
-### Step 16: ReMake and create executable
-> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
-
-```bash
-cd /opt/GEMM-ArchProfiler/darknet
-make clean
-make
-```
 
 
-### Step 15: Download CPU Configuration Files
-```bash
-git init
-git remote add origin https://github.com/binooa/GEMM-ArchProfiler.git
-git config core.sparseCheckout true
-echo "cpuconf/" >> .git/info/sparse-checkout
-git pull origin main
-```
 
 
+---
 
 [← Back to Main README](../README.md)

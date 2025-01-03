@@ -88,7 +88,6 @@ Check if the libm5.a or libm5.so file exists:
 ls /opt/GEMM-ArchProfiler/gem5/util/m5/build/x86/out
 ```
 
-
 ---
 
 [← Back to Main README](../README.md)
