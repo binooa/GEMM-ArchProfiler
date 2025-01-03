@@ -59,17 +59,18 @@ scons build/X86/gem5.debug ARCH=X86 --gprof
 Step 5: Verify the Build
 Check if the gem5 binary was successfully built by listing the build/X86/ directory:
 
-bash
+```bash
 Copy code
 ls build/X86/
+```
 You should see a file named gem5.opt or gem5.debug.
 
 Step 6: Run a Basic Test
 To ensure that gem5 is working, run a simple test simulation:
 
-bash
-Copy code
+```bash
 build/X86/gem5.opt configs/example/se.py --cmd=/bin/ls
+```
 This runs a simple simulation using the X86 architecture and the ls command.
 
 ---
