@@ -26,8 +26,8 @@ sudo apt install build-essential scons python3-dev git pre-commit zlib1g zlib1g-
     m4 libcapstone-dev libpng-dev libelf-dev pkg-config wget cmake doxygen dos2unix
 ```
 
-#### Clone the gem5 Repository
-## About gem5
+### Clone the gem5 Repository
+### About gem5
 
 gem5 is a modular and highly flexible open-source architectural simulator widely used in computer architecture research and education. It provides a comprehensive framework for simulating a variety of systems, including CPUs, GPUs, and memory subsystems, across multiple ISAs (Instruction Set Architectures) like X86, ARM, RISC-V, and more.
 
@@ -39,7 +39,7 @@ With its support for profiling tools like `gprof`, gem5 is an indispensable tool
 git clone https://github.com/gem5/gem5
 ```
 
-#### Build gem5 
+### Build gem5 
 ```bash
 cd gem5
 scons build/X86/gem5.opt  ARCH=X86 -j$(nproc)
@@ -56,7 +56,7 @@ scons build/X86/gem5.debug ARCH=X86 --gprof
 
 #### Check gem5 
 
-Step 5: Verify the Build
+### Step 5: Verify the Build
 Check if the gem5 binary was successfully built by listing the build/X86/ directory:
 
 ```bash
@@ -65,7 +65,7 @@ ls build/X86/
 ```
 You should see a file named gem5.opt or gem5.debug.
 
-Step 6: Run a Basic Test
+### Step 6: Run a Basic Test
 To ensure that gem5 is working, run a simple test simulation:
 
 ```bash
