@@ -39,15 +39,38 @@ With its support for profiling tools like `gprof`, gem5 is an indispensable tool
 git clone https://github.com/gem5/gem5
 ```
 
-#### Build gem5 with Profiling Support
-Compile gem5 with the `--gprof` flag to enable compatibility with the `gprof` profiling tool:
+#### Build gem5 
 ```bash
 cd gem5
+scons build/X86/gem5.opt  ARCH=X86 -j$(nproc)
+```
+
+(Optional) Enable Profiling
+To enable profiling with tools like gprof, recompile gem5 with the --gprof flag:
+```bash
 scons build/X86/gem5.debug ARCH=X86 --gprof
 ```
 > **Note**: The `--gprof` flag enables detailed performance profiling of GEMM operations during simulation. 
 
 > **Note:** : The compilation process may take approximately one hour to complete, depending on your system's specifications. Ensure your system has sufficient computational resources and allocate adequate time for this build process.
+
+#### Check gem5 
+
+Step 5: Verify the Build
+Check if the gem5 binary was successfully built by listing the build/X86/ directory:
+
+bash
+Copy code
+ls build/X86/
+You should see a file named gem5.opt or gem5.debug.
+
+Step 6: Run a Basic Test
+To ensure that gem5 is working, run a simple test simulation:
+
+bash
+Copy code
+build/X86/gem5.opt configs/example/se.py --cmd=/bin/ls
+This runs a simple simulation using the X86 architecture and the ls command.
 
 ---
 
