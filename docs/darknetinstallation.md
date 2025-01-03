@@ -24,12 +24,7 @@ rm Makefile
 wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/Makefile -O Makefile
 ```
 
-### Step 8: Replace Existing gemm.c File in Darknet Source Directory
-> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
-```bash
-rm src/gemm.c
-wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
-```
+
 ### Step 9: Copy dummy_gpu.c File in Darknet Source Directory
 > **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
@@ -103,10 +98,21 @@ cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 ```
 
-
-### Step 14: Change Directory Back to GEMM-ArchProfiler
+### Step 15: Replace Existing gemm.c File in Darknet Source Directory
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
 ```bash
-cd /opt/GEMM-ArchProfiler
+cd /opt/GEMM-ArchProfiler/darknet/
+rm src/gemm.c
+wget https://github.com/binooa/GEMM-ArchProfiler/raw/main/src/gemm.c -O src/gemm.c
+```
+
+### Step 16: ReMake and create executable
+> **Alert**: Make sure your current working directory is set to `/opt/GEMM-ArchProfiler/darknet` before proceeding.
+
+```bash
+cd /opt/GEMM-ArchProfiler/darknet
+make clean
+make
 ```
 
 
