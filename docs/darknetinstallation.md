@@ -53,24 +53,38 @@ wget https://pjreddie.com/media/files/densenet201.weights
 wget https://pjreddie.com/media/files/resnet152.weights
 ```
 
+#### Check darkent 
 
+### Step 12: Verify the Build
+Check if the darknet binary was successfully built by listing the darknet directory:
 
-### Step 12: Change Directory Back to GEMM-ArchProfiler
 ```bash
-cd /opt/GEMM-ArchProfiler
+ls /opt/GEMM-ArchProfiler/darknet/darknet
 ```
+You should see a file named darknet.
 
-### Step 13: Download CPU Configuration Files
+### Step 13: Test Run
+Check if the darknet binary was successfully built by listing the darknet directory:
+
 ```bash
-git init
-git remote add origin https://github.com/binooa/GEMM-ArchProfiler.git
-git config core.sparseCheckout true
-echo "cpuconf/" >> .git/info/sparse-checkout
-git pull origin main
+cd /opt/GEMM-ArchProfiler/darknet
+./darknet classifier predict cfg/imagenet1k.data cfg/darknet53.cfg darknet53.weights data/dog.jpg
 ```
+If the binary is built correctly and all files specified in the command line are available, the command will run the classification task using the darknet53 CNN model on the provided image (dog.jpg).
+```bash
+cd /opt/GEMM-ArchProfiler/darknet
+./darknet classifier predict cfg/imagenet1k.data cfg/densenet201.cfg densenet201.weights data/dog.jpg
+```
+If the binary is built correctly and all files specified in the command line are available, the command will run the classification task using the densenet201 CNN model on the provided image (dog.jpg).
 
-### Step 14: Execution Bug Fixing
-> **Alert**: If any, errors identified during execution, try.
+```bash
+cd /opt/GEMM-ArchProfiler/darknet
+./darknet classifier predict cfg/imagenet1k.data cfg/resnet152.cfg resnet152.weights data/dog.jpg
+```
+If the binary is built correctly and all files specified in the command line are available, the command will run the classification task using the resnet152 CNN model on the provided image (dog.jpg).
+
+### Step 14: darknet Execution Bug Fixing
+> **Alert**: If any, errors are identified during execution due to special characters in configuration files, you can inspect the files using the 'cat' command. Special characters might appear at the end of lines. To remove these characters and make the file readable for Unix-based systems, use the 'dos2unix' command:
 
 ```bash
 cat -A /opt/GEMM-ArchProfiler/darknet/cfg/imagenet1k.data
@@ -88,5 +102,23 @@ dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/densenet201.cfg
 cat -A /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 dos2unix /opt/GEMM-ArchProfiler/darknet/cfg/resnet152.cfg
 ```
+
+
+### Step 14: Change Directory Back to GEMM-ArchProfiler
+```bash
+cd /opt/GEMM-ArchProfiler
+```
+
+
+### Step 15: Download CPU Configuration Files
+```bash
+git init
+git remote add origin https://github.com/binooa/GEMM-ArchProfiler.git
+git config core.sparseCheckout true
+echo "cpuconf/" >> .git/info/sparse-checkout
+git pull origin main
+```
+
+
 
 [← Back to Main README](../README.md)
