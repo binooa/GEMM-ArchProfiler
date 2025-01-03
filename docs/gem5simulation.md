@@ -1,4 +1,4 @@
-## GEMM Algorithm(s) Implementation in Customised darknet CNN library - Setup Instructions
+## GEM5 Simulator - CPU Configuration(s) - Setup Instructions
 
 ---
 
