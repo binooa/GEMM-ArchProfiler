@@ -48,6 +48,10 @@ wget https://pjreddie.com/media/files/densenet201.weights
 wget https://pjreddie.com/media/files/resnet152.weights
 ```
 
+#### Archtiectural details of CNN Models
+[Archtiectural details of CNN Models (darknet53/densenet201/resnet152)](cnn_arch.md)
+
+
 #### Check darkent 
 
 ### Step 12: Verify the Build
