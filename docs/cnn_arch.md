@@ -4,7 +4,7 @@
 Darknet53 is a convolutional neural network architecture comprising 53 layers, primarily convolutional, with no fully connected layers. It employs skip connections inspired by ResNet, allowing efficient gradient flow and faster convergence during training. The network uses successive 3x3 and 1x1 convolutional kernels for feature extraction, along with batch normalization and Leaky ReLU activation. Darknet53 is highly efficient for feature extraction in object detection tasks, forming the backbone of the YOLOv3 object detection framework. Its balance between computational efficiency and performance makes it ideal for real-time applications.
 
 <details>
-'''
+```
 Darknet53(
   (layers): ModuleList(
     (0): ConvBlock(
@@ -114,7 +114,7 @@ Darknet53(
     )
   )
 )
-'''
+```
 </details>
 
 
