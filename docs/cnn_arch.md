@@ -1117,4 +1117,15 @@ ResNet152(
 )
 ```
 
+## Comparative Summary of Models
+
+| **Model**       | **Input Size**  | **Number of Layers** | **Output Shape**               | **Use Case**                     |
+|------------------|-----------------|-----------------------|---------------------------------|-----------------------------------|
+| **Darknet53**    | `3x416x416`     | 53                    | `batch_size x 1024 x 13 x 13`  | Feature extraction for object detection |
+| **DenseNet201**  | `3x224x224`     | 201                   | `batch_size x num_classes`     | Image classification             |
+| **ResNet152**    | `3x224x224`     | 152                   | `batch_size x num_classes`     | Image classification             |
+
+> **Note**: The "Number of Convolutions (GEMM Calls)" column indicates the number of convolution layers in each model. Each convolution operation corresponds to a GEMM call, which is a key operation in deep learning computations.
+
+
 [← Back to Prev](darknetinstallation.md)
