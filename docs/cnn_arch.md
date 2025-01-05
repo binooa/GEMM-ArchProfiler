@@ -121,7 +121,7 @@ Darknet53(
 ### densenet201
 
 DenseNet201 is a 201-layer convolutional neural network based on the DenseNet architecture, which connects each layer to every subsequent layer in a dense block. This connectivity enables feature reuse, reducing the number of parameters while maintaining high computational efficiency. DenseNet201 consists of dense blocks interspersed with transition layers that use 1x1 convolutions and pooling to reduce feature map dimensions. The architecture excels in tasks requiring deep networks, offering high accuracy in image classification and object detection while being memory-efficient compared to other architectures.
-<details>
+```
 
 DenseNetCustom(
   (densenet): DenseNet(
@@ -626,11 +626,11 @@ DenseNetCustom(
   )
 )
 
-</details>
+```
 ### resnet152
 ResNet152 is a deep convolutional neural network with 152 layers, leveraging the concept of residual learning to address the challenges of training very deep models. The network uses identity shortcut connections that bypass one or more layers, mitigating the vanishing gradient problem and facilitating effective training. ResNet152 employs 3x3 convolutions, batch normalization, and ReLU activations within residual blocks, maintaining computational efficiency despite its depth. Its architecture is widely recognized for superior performance on complex vision tasks, such as image classification, segmentation, and object detection. 
 
-<details>
+```
 ResNet152Custom(
   (resnet): ResNet(
     (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
@@ -1115,6 +1115,6 @@ ResNet152Custom(
     (fc): Linear(in_features=2048, out_features=10, bias=True)
   )
 )
-</details>
+```
 
 [← Back to Prev](darknetinstallation.md)
