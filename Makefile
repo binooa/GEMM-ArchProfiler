@@ -18,7 +18,7 @@ ARFLAGS=rcs
 OPTS=-Ofast
 LDFLAGS=-lm -pthread -I/path/to/gem5/include -L/path/to/gem5/lib -lm5
 COMMON=-Iinclude/ -Isrc/
-CFLAGS=-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC $(COMMON) -I/home/binu/gem5/gem5/include
+CFLAGS=-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC -Wno-stringop-truncation $(COMMON) -I/home/binu/gem5/gem5/include
 
 # gem5-specific paths
 GEM5_INCLUDE=/opt/GEMM-ArchProfiler/gem5/include
