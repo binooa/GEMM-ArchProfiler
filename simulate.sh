@@ -1,54 +1,41 @@
 #!/bin/bash
 
-# Function to run the specified program
-run_program() {
-    local network=$1
-    local config=$2
-    local output_dir="/opt/GEMM-ArchProfiler/output/${network}"
-    local script_path="/opt/GEMM-ArchProfiler/cpuconf/${network}/${config}.py"
-    
-    echo "Running ${network} with configuration ${config}..."
-    /opt/GEMM-ArchProfiler/gem5/gem5/build/X86/gem5.opt --outdir=${output_dir} ${script_path}
-    echo "Execution completed for ${network} with ${config}."
-}
+# Function to run the selected program in the background
 
-# Main menu function
-menu() {
-    echo "Select a neural network to run:"
-    echo "1. Darknet"
-    echo "2. DenseNet"
-    echo "3. ResNet"
-    echo "4. Exit"
-    read -p "Enter your choice [1-4]: " choice
 
-    case $choice in
-        1)
-            echo "You selected Darknet."
-            run_program "darknet" "samsung_exynos"
-            run_program "darknet" "x86_intel_skylake_i3"
-            ;;
-        2)
-            echo "You selected DenseNet."
-            run_program "densenet" "samsung_exynos"
-            run_program "densenet" "x86_intel_skylake_i3"
-            ;;
-        3)
-            echo "You selected ResNet."
-            run_program "resnet" "samsung_exynos"
-            run_program "resnet" "x86_intel_skylake_i3"
-            ;;
-        4)
-            echo "Exiting the program. Goodbye!"
-            exit 0
-            ;;
-        *)
-            echo "Invalid choice. Please select a valid option."
-            ;;
-    esac
-}
+# Main menu
+echo "Select the neural network to run:"
+echo "1. Darknet"
+echo "2. DenseNet"
+echo "3. ResNet"
+read -p "Enter your choice [1-3]: " choice
 
-# Loop to display the menu until the user exits
-while true; do
-    menu
-    echo ""
-done
+case $choice in
+    1)
+        echo "You selected Darknet."
+        cd /opt/GEMM-ArchProfiler/darknet 
+        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/darknet"        
+        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/darknet_cpu_config.py > /opt/GEMM-ArchProfiler/output/darknet/darknet_status.log 2>&1 &
+        echo "To check the status of execution; execute  'cat  /opt/GEMM-ArchProfiler/output/darknet/darknet_status.log ' "
+        ;;
+    2)
+        echo "You selected DenseNet."
+        cd /opt/GEMM-ArchProfiler/darknet
+        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/densenet"            
+        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/densenet_cpu_config.py > /opt/GEMM-ArchProfiler/output/densenet/densenet_status.log 2>&1 &
+        ;;
+    3)
+        echo "You selected ResNet."
+        cd /opt/GEMM-ArchProfiler/darknet
+        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
+        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/resnet_cpu_config.py > /opt/GEMM-ArchProfiler/output/resnet/resnet_status.log 2>&1 &
+        ;;
+    *)
+        echo "Invalid choice. Exiting."
+        exit 1
+        ;;
+esac
+
+# Exit the script after starting the background process
+echo "Process initialized. Exiting the shell script."
+

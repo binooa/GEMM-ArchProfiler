@@ -4,10 +4,10 @@ from m5.objects import *
 import m5
 
 # Set output directory
-m5.core.setOutputDir("/opt/GEMM-ArchProfiler/output")
+m5.core.setOutputDir("/opt/GEMM-ArchProfiler/output/densenet")
 
 # Checkpoint directory
-checkpoint_dir = "/opt/GEMM-ArchProfiler/output/checkpoints"
+checkpoint_dir = "/opt/GEMM-ArchProfiler/output/checkpoints/densenet"
 
 # Options
 resume_from_checkpoint = False  # Set to True to resume from a saved checkpoint
@@ -104,7 +104,7 @@ root.system.mem_ctrl.port = root.system.membus.mem_side_ports
 
 # Set up the workload for the system
 binary_path = '/opt/GEMM-ArchProfiler/darknet/darknet'
-args = ['classifier', 'predict', 'cfg/imagenet1k.data', 'cfg/darknet53.cfg', 'darknet53.weights', 'data/dog.jpg']
+args = ['classifier', 'predict', 'cfg/imagenet1k.data', 'cfg/densenet201.cfg', 'densenet201.weights', 'data/dog.jpg']
 
 # Debugging output
 print(f"Binary Path: {binary_path}")
