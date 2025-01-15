@@ -20,8 +20,8 @@ After the completion of the simulation, two important output files will be gener
 
 ### Sample Files
 
-You can find a sample gemm_calls.txt [here](output_example/gemm_calls.txt).
-You can find a sample stats.txt [here](output_example/stats.txt).
+You can find a sample gemm_calls.txt [here](../output_example/gemm_calls.txt).
+You can find a sample stats.txt [here](../output_example/stats.txt).
 
 ### Output Directory
 
@@ -75,4 +75,7 @@ After successful execution, the script will generate a gemm_metrics.csv file in 
 
 ### Sample Output file
 
-You can find a sample gemm_metrics.csv [here](output_example/gemm_metrics.csv).
+You can find a sample gemm_metrics.csv [here](../output_example/gemm_metrics.csv).
+
+
+[← Back to Main README](../README.md)
