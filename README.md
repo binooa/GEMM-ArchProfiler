@@ -44,6 +44,5 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 - [Step 3 : GEMM Algorithm(s) Implementation in Customised darknet CNN library](docs/gemm.md)
 - [Step 4 : GEM5 Simulator CPU Configuration(s)](docs/gem5simulation.md)
 - [Step 5 : Compile & Simulate](docs/runsimulation.md)
-- [Step 6 : GEM5 Simulation Log Processor](docs/darkentinstallation.md)
-- [Step 6 : Analyse Simulation Results](docs/development.md)
+- [Step 6 : Analyse Simulation Results](docs/analysis.md)
 - [Contributing](docs/contributing.md)
