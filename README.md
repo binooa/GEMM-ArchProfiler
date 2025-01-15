@@ -45,4 +45,17 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 - [Step 4 : GEM5 Simulator CPU Configuration(s)](docs/gem5simulation.md)
 - [Step 5 : Compile & Simulate](docs/runsimulation.md)
 - [Step 6 : Analyse Simulation Results](docs/analysis.md)
-- [Contributing](docs/contributing.md)
+
+# Credit Statement
+
+This project leverages the following foundational tools and resources:
+
+## gem5 Architectural Simulator
+A comprehensive platform for detailed architectural simulation and performance analysis of CPUs. The gem5 simulator provides a robust environment for evaluating hardware-level metrics and testing custom CPU configurations.  
+Documentation and further details can be found at: [gem5 Documentation](https://www.gem5.org/documentation/general_docs/building)
+
+## C-based CNN Implementation
+This framework integrates widely recognized CNN architectures, including Darknet, DenseNet, and ResNet, using the Darknet open-source library. These implementations provide flexibility and support for evaluating real-world AI workloads.  
+Explore the Darknet repository at: [Darknet GitHub](https://github.com/pjreddie/darknet)
+
+Special thanks to the contributors and maintainers of these resources for enabling cutting-edge research and development.
