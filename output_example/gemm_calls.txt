@@ -4,3 +4,4 @@ GEMM Layer: Layer3_GEMM -M: 1024, N: 512, K: 512
 GEMM Layer: Layer4_GEMM -M: 1024, N: 512, K: 512
 GEMM Layer: Layer5_GEMM -M: 512, N: 512, K: 256
 GEMM Layer: Layer6_GEMM -M: 512, N: 512, K: 256
+
