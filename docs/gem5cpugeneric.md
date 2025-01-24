@@ -1,4 +1,4 @@
-# **Cutomization of CPU Configuration for GEMM-ArchProfiler**
+# **Detailed Customization of CPU and GEMM-ArchProfiler Configuration with gem5**
 
 This file explains the setup and configuration of a system in gem5 for simulating the GEMM-ArchProfiler with O3CPU, multi-core setups, multi-level caches, and network-on-chip (NoC) components.
 
@@ -8,10 +8,11 @@ This file explains the setup and configuration of a system in gem5 for simulatin
 1. [Overview](#overview)
 2. [Directory Setup](#directory-setup)
 3. [System Configuration](#system-configuration)
-4. [Checkpoint Handling](#checkpoint-handling)
-5. [Simulation Execution](#simulation-execution)
-6. [Advanced Configurations](#advanced-configurations)
-7. [Results Analysis](#results-analysis)
+4. [Memory Modes](#memory-modes)
+5. [Checkpoint Handling](#checkpoint-handling)
+6. [Simulation Execution](#simulation-execution)
+7. [Advanced Configurations](#advanced-configurations)
+8. [Results Analysis](#results-analysis)
 
 ---
 
@@ -32,13 +33,13 @@ This guide covers a detailed gem5 setup to simulate:
 ### **Output Directory**
 Ensure the output directory exists before running the simulation:
 ```bash
-mkdir -p /opt/GEMM-ArchProfiler/output/darknet
+ls -l /opt/GEMM-ArchProfiler/output/darknet
 ```
 
 ### **Checkpoint Directory**
-Create a directory for saving simulation checkpoints:
+Ensure directory for saving simulation checkpoints:
 ```bash
-mkdir -p /opt/GEMM-ArchProfiler/output/checkpoints/darknet
+ls -l /opt/GEMM-ArchProfiler/output/checkpoints/darknet
 ```
 
 ---
@@ -105,6 +106,52 @@ root.system.l3cache.mem_side = root.system.membus.cpu_side_ports
 ### **5. Workload**:
 - **Binary Path**: `/opt/GEMM-ArchProfiler/darknet/darknet`
 - **Arguments**: `classifier predict cfg/imagenet1k.data cfg/darknet53.cfg darknet53.weights data/dog.jpg`
+
+---
+
+## **Memory Modes**
+
+The `memory mode` defines how the memory system is modeled in gem5. Available options include:
+
+### **1. `atomic` Mode**
+- **Description**: Fast functional simulation with no detailed timing.
+- **Use Case**: Early-stage testing.
+- **Configuration**:
+  ```python
+  system.mem_mode = 'atomic'
+  ```
+
+### **2. `timing` Mode**
+- **Description**: Detailed timing simulation for memory accesses.
+- **Use Case**: Performance evaluation and bottleneck analysis.
+- **Configuration**:
+  ```python
+  system.mem_mode = 'timing'
+  ```
+
+### **3. `atomic_noncaching` Mode**
+- **Description**: Disables caching while using functional simulation.
+- **Use Case**: Debugging raw memory behavior.
+- **Configuration**:
+  ```python
+  system.mem_mode = 'atomic_noncaching'
+  ```
+
+### **4. `atomic_caching` Mode**
+- **Description**: Functional simulation with basic cache support.
+- **Use Case**: Lightweight cache modeling.
+- **Configuration**:
+  ```python
+  system.mem_mode = 'atomic_caching'
+  ```
+
+### **5. `ideal` Mode**
+- **Description**: Assumes no latency or bandwidth constraints for memory.
+- **Use Case**: Baseline performance studies.
+- **Configuration**:
+  ```python
+  system.mem_mode = 'ideal'
+  ```
 
 ---
 
@@ -207,3 +254,4 @@ After the simulation, review results in the `output` directory:
 ---
 
 [← Back to Main README](../README.md)
+
