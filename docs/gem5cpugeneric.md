@@ -288,6 +288,7 @@ Below is a Python configuration code for reference, combining all the discussed 
 
 
 ```python
+
 import os
 import shutil
 from m5.objects import *
@@ -367,6 +368,22 @@ root.system.mem_ctrl.port = root.system.membus.mem_side_ports
 # System Port
 root.system.system_port = root.system.membus.cpu_side_ports
 
+# Set up the workload for the system
+binary_path = '/opt/GEMM-ArchProfiler/darknet/darknet'
+args = ['classifier', 'predict', 'cfg/imagenet1k.data', 'cfg/darknet53.cfg', 'darknet53.weights', 'data/dog.jpg']
+
+# Debugging output
+print(f"Binary Path: {binary_path}")
+print(f"Arguments: {args}")
+
+# Initialize SEWorkload
+root.system.workload = SEWorkload.init_compatible(binary_path)
+
+# Assign the workload to the CPU
+process = Process(pid=100, cmd=[binary_path] + args)
+root.system.cpu[0].workload = process
+root.system.cpu[0].createThreads()
+
 # Instantiate and run simulation
 if resume_from_checkpoint and os.path.exists(checkpoint_dir):
     print(f"Resuming from checkpoint: {checkpoint_dir}")
@@ -396,6 +413,7 @@ while True:
     if exit_event.getCause() == "simulate() limit reached":
         break
 print("Simulation complete.")
+
 ```
 
 
