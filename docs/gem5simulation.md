@@ -13,6 +13,10 @@ git config core.sparseCheckout true
 echo "cpuconf/" >> .git/info/sparse-checkout
 git pull origin main
 ```
+[← GEM5 CPU Configuration Details](gem5cpuconf.md)
+
+
+
 
 
 ---
