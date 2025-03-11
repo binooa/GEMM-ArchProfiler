@@ -135,6 +135,3 @@ After the simulation, review the results in the `output` directory:
 
 ---
 
----
-
-[← Back to Main README](../README.md)
