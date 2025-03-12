@@ -21,6 +21,8 @@ git pull origin main
 
 <span style="color:yellow; font-weight:bold;">## Sample Configuration Files for Intel and ARM Architectures</span>
 
+<mark>Tsz</mark>
+
 | Architecture | gem5 CPU Configuration | Remarks |
 |----------|----------|----------|
 | IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/IntelCorei3_6100U.py)   | Data 3   |
