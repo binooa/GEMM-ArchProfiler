@@ -45,6 +45,7 @@ GEMM-ArchProfiler leverages three major frameworks/packages:
 - [Step 4 : GEM5 Simulator CPU Configuration(s)](docs/gem5simulation.md)
 - [Step 5 : Compile & Simulate](docs/runsimulation.md)
 - [Step 6 : Analyse Simulation Results](docs/analysis.md)
+- [Reference Outputs : Sample Outputs](docs/sampleoutputs.md)
 
 # Credit Statement
 
