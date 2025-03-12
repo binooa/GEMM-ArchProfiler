@@ -22,7 +22,6 @@ git pull origin main
 ## Sample Configuration Files for Intel and ARM Architectures
 
 
-
 | Architecture | gem5 CPU Configuration | Remarks |
 |----------|----------|----------|
 | IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/IntelCorei3_6100U.py)   | The Intel Core i3-6100U is a 6th Generation Skylake processor designed for low-power mobile computing and embedded applications. It features 2 cores and 4 threads with a base clock speed of 2.30 GHz. The processor has a three-level cache hierarchy, consisting of 32 KB L1 cache per core, 256 KB L2 cache per core, and a shared 3 MB L3 cache. It supports up to 8 GB DDR3 RAM at 1600 MHz and includes AVX2, SSE4.1, and SSE4.2 instruction set extensions. With a TDP (Thermal Design Power) of 15W, the i3-6100U is optimized for energy-efficient performance in laptops and embedded systems.|
@@ -50,5 +49,25 @@ This configuration executes a **binary file** within the GEM5 simulation environ
 
 ---
 
+## Note
+
+Simulation may take five hours or more, depending on the specifications of the system running the simulation. Ensure sufficient system resources and plan accordingly. 
+
+Before performing the simulation, the **`simulate.sh`** file must be modified to ensure that the updated configuration file is used for simulation.
+
+```
+    4)
+        echo "You selected Darkent on IntelCorei3_6100U."
+        cd /opt/GEMM-ArchProfiler/darknet
+        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
+        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/IntelCorei3_6100U.py > /opt/GEMM-ArchProfiler/output/darknet_inteli1/darknet_inteli1_status.log 2>&1 &
+        ;;
+
+    5)
+        echo "You selected Darkent on Samsung Exynos5422."
+        cd /opt/GEMM-ArchProfiler/darknet
+        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
+        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/exynos5422.py > /opt/GEMM-ArchProfiler/output/darknet_exyons5422/darknet_exyons5422_status.log 2>&1 &
+        ;;
 
 [← Back to Main README](../README.md)
