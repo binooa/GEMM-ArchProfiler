@@ -25,13 +25,14 @@ git pull origin main
 
 | Architecture | gem5 CPU Configuration | Remarks |
 |----------|----------|----------|
-| IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/IntelCorei3_6100U.py)   | Data 3   |
+| IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/IntelCorei3_6100U.py)   | The **Intel Core i3-6100U** is a **6th Generation Skylake processor** designed for **low-power mobile computing** and embedded applications. It features **2 cores and 4 threads** with a **base clock speed of 2.30 GHz**. The processor has a **three-level cache hierarchy**, consisting of **32 KB L1 cache per core, 256 KB L2 cache per core, and a shared 3 MB L3 cache**. It supports **up to 8 GB DDR3 RAM at 1600 MHz** and includes **AVX2, SSE4.1, and SSE4.2 instruction set extensions**. With a **TDP (Thermal Design Power) of 15W**, the i3-6100U is optimized for energy-efficient performance in **laptops and embedded systems**.
+  |
 | Exynos5422   | [Exynos5422 Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/exynos5422.py)   | Data C   |
 
 
 
 ### GEM5 Simulation - Binary Execution Configuration for Intel and ARM Architectures
-This configuration executes a **binary file** within the GEM5 simulation environment. The setup runs the **Darknet-based classifier** to evaluate **GEMM workloads** in CNN-based AI models. It can be replace with Resnet OR Denset.
+This configuration executes a **binary file** within the GEM5 simulation environment. The setup runs the **Darknet-based classifier** to evaluate **GEMM workloads** in CNN-based AI models. It can be replaced with Resnet OR Denset.
 
 ---
 
