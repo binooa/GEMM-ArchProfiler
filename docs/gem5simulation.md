@@ -17,6 +17,12 @@ git pull origin main
 
 [← GEM5 CPU Customization Instructions to change CPU Configuration](gem5cpugeneric.md)
 
+### Sample Configuration Files for Intel and ARM Architectures
+
+| Architecture | gem5 CPU Configuration | Reamrks |
+|----------|----------|----------|
+| IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://example.com)   | Data 3   |
+| Exynos5422   | [Exynos5422 Configuration](https://example.com)   | Data C   |
 
 
 
