@@ -21,8 +21,8 @@ git pull origin main
 
 | Architecture | gem5 CPU Configuration | Reamrks |
 |----------|----------|----------|
-| IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://example.com)   | Data 3   |
-| Exynos5422   | [Exynos5422 Configuration](https://example.com)   | Data C   |
+| IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/IntelCorei3_6100U.py)   | Data 3   |
+| Exynos5422   | [Exynos5422 Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/exynos5422.py)   | Data C   |
 
 
 
