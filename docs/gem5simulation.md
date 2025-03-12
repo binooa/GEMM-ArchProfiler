@@ -69,5 +69,5 @@ Before performing the simulation, the **`simulate.sh`** file must be modified to
         export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
         nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/exynos5422.py > /opt/GEMM-ArchProfiler/output/darknet_exyons5422/darknet_exyons5422_status.log 2>&1 &
         ;;
-
+``
 [← Back to Main README](../README.md)
