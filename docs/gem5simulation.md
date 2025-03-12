@@ -36,8 +36,8 @@ This configuration executes a **binary file** within the GEM5 simulation environ
 
 ---
 
-#### **Binary Execution Details**
-#### **Binary Path & Execution Arguments**
+#### **Binary Execution Details** 
+
 | Parameter | Value |
 |-----------|----------------------------------------------------------|
 | **Binary Path** | `/opt/GEMM-ArchProfiler/darknet/darknet` |
