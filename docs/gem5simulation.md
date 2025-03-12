@@ -17,7 +17,7 @@ git pull origin main
 
 [← GEM5 CPU Customization Instructions to change CPU Configuration](gem5cpugeneric.md)
 
-### Sample Configuration Files for Intel and ARM Architectures
+## Sample Configuration Files for Intel and ARM Architectures
 
 | Architecture | gem5 CPU Configuration | Remarks |
 |----------|----------|----------|
@@ -26,13 +26,13 @@ git pull origin main
 
 
 
-## GEM5 Simulation - Binary Execution Configuration for Intel and ARM Architectures
+### GEM5 Simulation - Binary Execution Configuration for Intel and ARM Architectures
 This configuration executes a **binary file** within the GEM5 simulation environment. The setup runs the **Darknet-based classifier** to evaluate **GEMM workloads** in CNN-based AI models. It can be replace with Resnet OR Denset.
 
 ---
 
-## **Binary Execution Details**
-### **Binary Path & Execution Arguments**
+#### **Binary Execution Details**
+#### **Binary Path & Execution Arguments**
 | Parameter | Value |
 |-----------|----------------------------------------------------------|
 | **Binary Path** | `/opt/GEMM-ArchProfiler/darknet/darknet` |
@@ -45,17 +45,5 @@ This configuration executes a **binary file** within the GEM5 simulation environ
 
 ---
 
-
-## **Setup Instructions**
-### **1️⃣ Clone GEMM-ArchProfiler Repository**
-```bash
-git init
-git remote add origin https://github.com/binooa/GEMM-ArchProfiler.git
-git config core.sparseCheckout true
-echo "cpuconf/" >> .git/info/sparse-checkout
-git pull origin main
-
-
----
 
 [← Back to Main README](../README.md)
