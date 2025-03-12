@@ -24,10 +24,10 @@ git pull origin main
 | IntelCorei3_6100U   | [IntelCorei3_6100U Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/IntelCorei3_6100U.py)   | Data 3   |
 | Exynos5422   | [Exynos5422 Configuration](https://github.com/binooa/GEMM-ArchProfiler/blob/main/cpuconf/exynos5422.py)   | Data C   |
 
-# GEM5 Simulation - Binary Execution Configuration
 
-## Overview
-This configuration executes a **binary file** within the GEM5 simulation environment. The setup runs the **Darknet-based classifier** to evaluate **GEMM workloads** in CNN-based AI models.
+
+## GEM5 Simulation - Binary Execution Configuration for Intel and ARM Architectures
+This configuration executes a **binary file** within the GEM5 simulation environment. The setup runs the **Darknet-based classifier** to evaluate **GEMM workloads** in CNN-based AI models. It can be replace with Resnet OR Denset.
 
 ---
 
@@ -44,6 +44,7 @@ This configuration executes a **binary file** within the GEM5 simulation environ
 | **Input Image** | `data/dog.jpg` |
 
 ---
+
 
 ## **Setup Instructions**
 ### **1️⃣ Clone GEMM-ArchProfiler Repository**
