@@ -56,19 +56,19 @@ Simulation may take five hours or more, depending on the specifications of the s
 Before performing the simulation, the **`simulate.sh`** file must be modified to ensure that the updated configuration file is used for simulation.
 
 ```
-    4)
-        echo "You selected Darkent on IntelCorei3_6100U."
-        cd /opt/GEMM-ArchProfiler/darknet
-        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
-        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/IntelCorei3_6100U.py > /opt/GEMM-ArchProfiler/output/darknet_inteli1/darknet_inteli1_status.log 2>&1 &
-        ;;
+4)
+    echo "You selected Darkent on IntelCorei3_6100U."
+    cd /opt/GEMM-ArchProfiler/darknet
+    export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
+    nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/IntelCorei3_6100U.py > /opt/GEMM-ArchProfiler/output/darknet_inteli1/darknet_inteli1_status.log 2>&1 &
+    ;;
 
-    5)
-        echo "You selected Darkent on Samsung Exynos5422."
-        cd /opt/GEMM-ArchProfiler/darknet
-        export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
-        nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/exynos5422.py > /opt/GEMM-ArchProfiler/output/darknet_exyons5422/darknet_exyons5422_status.log 2>&1 &
-        ;;
-
+5)
+    echo "You selected Darkent on Samsung Exynos5422."
+    cd /opt/GEMM-ArchProfiler/darknet
+    export GEMM_LOG_DIR="/opt/GEMM-ArchProfiler/output/resnet"               
+    nohup /opt/GEMM-ArchProfiler/gem5/build/X86/gem5.opt --outdir=/opt/GEMM-ArchProfiler/gem5_output /opt/GEMM-ArchProfiler/cpuconf/exynos5422.py > /opt/GEMM-ArchProfiler/output/darknet_exyons5422/darknet_exyons5422_status.log 2>&1 &
+    ;;
+```
 ---
 [← Back to Main README](../README.md)
