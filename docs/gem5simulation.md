@@ -17,7 +17,9 @@ git pull origin main
 
 [← GEM5 CPU Customization Instructions to change CPU Configuration](gem5cpugeneric.md)
 
-## Sample Configuration Files for Intel and ARM Architectures
+
+
+<span style="color:yellow; font-weight:bold;">## Sample Configuration Files for Intel and ARM Architectures</span>
 
 | Architecture | gem5 CPU Configuration | Remarks |
 |----------|----------|----------|
