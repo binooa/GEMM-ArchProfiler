@@ -21,7 +21,9 @@ git pull origin main
 
 <span style="color:yellow; font-weight:bold;">## Sample Configuration Files for Intel and ARM Architectures</span>
 
-<mark>Tsz</mark>
+<div style="color:yellow; font-size:22px; font-weight:bold;">
+## Setup Instructions
+</div>
 
 | Architecture | gem5 CPU Configuration | Remarks |
 |----------|----------|----------|
